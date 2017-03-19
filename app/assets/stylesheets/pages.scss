@@ -580,19 +580,22 @@
     background-repeat: no-repeat;
   }
   .slide-1 {
-    background-image: url("team_1.jpg");
+    background-image: linear-gradient(rgba(0,0,0,.6), rgba(0,0,0,.6)), url("team_1.jpg");
   }
   .slide-2 {
-    background-image: url("team_2.jpg");
+    background-image: linear-gradient(rgba(0,0,0,.6), rgba(0,0,0,.6)), url("team_2.jpg");
   }
   .slide-3 {
-    background-image: url("team_3.jpg");
+    background-image: linear-gradient(rgba(0,0,0,.6), rgba(0,0,0,.6)), url("team_3.jpg");
   }
   .slide-4 {
-    background-image: url("office_building.jpg");
+    background-image: linear-gradient(rgba(0,0,0,.6), rgba(0,0,0,.6)), url("office_building.jpg");
   }
   .slide-5 {
-    background-image: url("office_inside.jpg");
+    background-image: linear-gradient(rgba(0,0,0,.6), rgba(0,0,0,.6)), url("office_inside.jpg");
+  }
+  .slide-6 {
+    background-image: linear-gradient(rgba(0,0,0,.6), rgba(0,0,0,.6)), url("vacancy-new.jpg");
   }
 }
 
@@ -645,4 +648,48 @@
       }
     }
   }
+}
+
+#form {
+  padding: 3rem 3.5%;
+  background: #FFFFFF;
+  border-radius: .35rem;
+}
+
+.wrapper_skinny {
+  width: 60%;
+  margin: 0 auto;
+}
+
+.button {
+  background: #F05F40;
+  border: 0;
+  padding: 10px 24px;
+  color: #fff;
+  transition: 0.4s;
+  &:hover {
+    background: #FF775A;
+    color: #fff;
+  }
+}
+
+.form_in {
+  margin: .5rem 0 1rem 0;
+}
+
+.header_sign_top {
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+.bg-overlay {
+    background-image: linear-gradient(rgba(0,0,0,.6), rgba(0,0,0,.6)), url("vacancy-new.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    width: 100%;
+    color: #fff;
+    height: 450px;
+    padding-top: 50px;
 }

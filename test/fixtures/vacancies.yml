@@ -1,0 +1,19 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyString
+  country: MyString
+  city: MyString
+  description: MyText
+  requirements: MyText
+  responsibilities: MyText
+  tools_and_techonologies: MyText
+
+two:
+  name: MyString
+  country: MyString
+  city: MyString
+  description: MyText
+  requirements: MyText
+  responsibilities: MyText
+  tools_and_techonologies: MyText
