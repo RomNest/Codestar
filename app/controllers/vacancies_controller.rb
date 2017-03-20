@@ -2,7 +2,7 @@ class VacanciesController < ApplicationController
 	before_action :find_vacancy, only: [:show, :edit, :update, :destroy]
 
 	def index
-		@vacancies = Vacancy.all.order("created_at DESC").paginate(:page => params[:page], :per_page => 8)
+		@vacancies = Vacancy.all.order("created_at DESC").paginate(:page => params[:page], :per_page => 1)
 	end
 
 	def new
@@ -27,12 +27,12 @@ class VacanciesController < ApplicationController
 	def destroy
 	end
 
+	private
+		def find_vacancy
+			@vacancy = Vacancy.find(params[:id])
+		end
 
-	def find_vacancy
-		@vacancy = Vacancy.find(params[:id])
-	end
-
-	def vacancy_params
-		params.require(:vacancy).permit(:name, :country, :city, :description, :requirements, :responsibilities, :tools_and_technologies)
-	end
+		def vacancy_params
+			params.require(:vacancy).permit(:name, :country, :city, :description, :requirements, :responsibilities, :tools_and_techonologies)
+		end
 end

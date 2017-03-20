@@ -1,0 +1,32 @@
+div class="container bg-overlay"
+div class="wrapper"
+	div class="vacancy"
+		hr
+		div class="container-fluid jumbotron pad_jumbo"
+			h1 
+				strong Direction: 
+				= @vacancy.name
+			h4
+				strong Country:  
+				= @vacancy.country
+			h4
+				strong City:  
+			 	= @vacancy.city
+		hr
+		p.lead = @vacancy.description
+		hr
+		h3
+			| Requirements
+			br
+		blockquote class="blockquote"
+			p.mb-0 = @vacancy.requirements.gsub(/[\n\r]/, "<br />").html_safe
+		h3
+			| Responsibilities
+			br
+		blockquote class="blockquote"
+			p.mb-0 = @vacancy.responsibilities
+		h3
+			| Tools and technologies
+			br
+		blockquote class="blockquote"
+			p.mb-0 = @vacancy.tools_and_techonologies

@@ -7,7 +7,7 @@ class CreateVacancies < ActiveRecord::Migration
       t.text :description
       t.text :requirements
       t.text :responsibilities
-      t.text :tools_and_techonologies
+      t.text :tools_and_technologies
 
       t.timestamps null: false
     end
