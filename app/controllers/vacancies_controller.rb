@@ -28,11 +28,11 @@ class VacanciesController < ApplicationController
 	end
 
 	private
-		def find_vacancy
-			@vacancy = Vacancy.find(params[:id])
-		end
+	def find_vacancy
+		@vacancy = Vacancy.find(params[:id])
+	end
 
-		def vacancy_params
-			params.require(:vacancy).permit(:name, :country, :city, :description, :requirements, :responsibilities, :tools_and_techonologies)
-		end
+	def vacancy_params
+		params.require(:vacancy).permit(:name, :country, :city, :description, :requirements, :responsibilities, :tools_and_techonologies)
+	end
 end
