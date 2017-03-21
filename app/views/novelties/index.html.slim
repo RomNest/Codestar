@@ -1,0 +1,6 @@
+div class="container bg-overlay-news"
+div class="wrapper"
+	div class="novelties"
+		h1 Our Novelties
+		- @novelties.each do |novelty|
+			h2.linkss = link_to novelty.title, controller: "novelties", action: "show", id: novelty

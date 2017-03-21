@@ -1,0 +1,12 @@
+#form
+	.wrapper_skinny
+
+		= form_for @novelty do |f|
+			.form_in
+				= f.label "Tile:"
+				= f.text_field :title, :autofocus => true, class: "form-control", placeholder: "Title."
+			.form_in
+				= f.label "Description:"
+				= f.text_area :description, class: "form-control", placeholder: "Description"
+			.form_in
+				= f.submit "Create a vacancy", remote: true, class:"btn button btn-block"

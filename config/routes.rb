@@ -5,5 +5,9 @@ Rails.application.routes.draw do
     resources :vacancies
   end
 
+  scope '/company/' do
+    resources :novelties
+  end
+
   root "pages#show", page: "home"
 end
