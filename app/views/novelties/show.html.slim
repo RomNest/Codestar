@@ -2,8 +2,22 @@ div class="container bg-overlay-news"
 div class="wrapper"
 	div class="novelties"
 		hr
-		h1 
-			strong Title:
-			= @novelty.title
+		div class="row"
+			div class="col-md-7"
+				h1 
+					strong Title: 
+					= @novelty.title
+				br
+				= image_tag @novelty.image.url(:medium)
+			div class="col-md-5"
+				h1
+					| Random new
+				hr
+				br
+				= link_to ( image_tag @random_novelty.image.url(:small) ), novelty_path(@random_novelty)
+				h2.linkss= link_to @random_novelty.title, novelty_path(@random_novelty)
+			div class="row"
+				div class="col-md-12"
+					hr
+					p.lead = @novelty.description.gsub(/[\n\r]/, "<br />").html_safe
 		hr
-		p.lead = @novelty.description

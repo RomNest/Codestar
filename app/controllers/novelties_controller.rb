@@ -3,10 +3,12 @@ class NoveltiesController < ApplicationController
 
 
 	def index
-		@novelties = Novelty.all
+		@novelties = Novelty.all.order("created_at DESC").paginate(:page => params[:page], :per_page => 3)
 	end
 
-	def show;end
+	def show
+		@random_novelty = Novelty.where.not(id: @novelty).order("RANDOM()").first
+	end
 
 	def new
 		@novelty = Novelty.new
@@ -33,6 +35,6 @@ class NoveltiesController < ApplicationController
 		end
 
 		def novelties_params
-			params.require(:novelty).permit(:title, :description)
+			params.require(:novelty).permit(:title, :description, :image)
 		end
 end

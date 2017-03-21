@@ -1,6 +1,15 @@
 div class="container bg-overlay-news"
 div class="wrapper"
 	div class="novelties"
-		h1 Our Novelties
-		- @novelties.each do |novelty|
-			h2.linkss = link_to novelty.title, controller: "novelties", action: "show", id: novelty
+		div class="codrops-header container-fluid"
+			h1 
+				strong Our Novelties
+		hr
+		div id="novelties"
+			- @novelties.each do |novelty|
+				div class="novelty"
+					= image_tag novelty.image.url(:small)
+					h2.linkss = link_to novelty.title, controller: "novelties", action: "show", id: novelty
+		hr
+		div class = "paginate_for"
+			= will_paginate @vacancies
