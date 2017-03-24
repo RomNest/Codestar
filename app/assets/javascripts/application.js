@@ -18,6 +18,8 @@
 //= require 'greensock/easing/EasePack'
 //= require 'greensock/jquery.gsap.js'
 //= require requestanimationframe_polyfill-rails/rAF.js
+//= require moment
+//= require fullcalendar
 //= require_tree .
 
 $(document).ready(function($) {

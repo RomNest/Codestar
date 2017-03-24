@@ -27,6 +27,9 @@ gem 'cancancan', '~> 1.16'
 gem 'will_paginate', '~> 3.1', '>= 3.1.5'
 gem 'paperclip', '~> 5.1'
 
+gem 'momentjs-rails'
+gem 'fullcalendar.io-rails'
+
 group :development, :test do
   gem 'byebug'
 end
