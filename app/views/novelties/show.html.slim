@@ -11,8 +11,7 @@ div class="wrapper"
 				= image_tag @novelty.image.url(:medium)
 			div class="col-md-5"
 				h1
-					| Random new
-				hr
+					| Random novelty:
 				br
 				= link_to ( image_tag @random_novelty.image.url(:small) ), novelty_path(@random_novelty)
 				h2.linkss= link_to @random_novelty.title, novelty_path(@random_novelty)

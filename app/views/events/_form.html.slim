@@ -1,0 +1,18 @@
+#form
+	.wrapper_skinny
+
+		= form_for @event do |f|
+			.form_in
+				= f.label "Event name:"
+				= f.text_field :title, :autofocus => true, class: "form-control", placeholder: "Event name"
+			.form_in
+				= f.label "Event description:"
+				= f.text_area :description, class: "form-control", placeholder: "Description"
+			.form_in
+				= f.label "Set event start date-time:"
+				= f.datetime_select :start, { ampm: true, order: [:day, :month, :year] }, { class: "form-control" }
+			.form_in
+				= f.label "Set event end date-time:"
+				= f.datetime_select :end, { ampm: true, order: [:day, :month, :year] }, { class: "form-control" }
+			.form_in
+				= f.submit "Create a event", remote: true, class:"btn button btn-block"

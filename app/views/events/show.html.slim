@@ -1,0 +1,25 @@
+div class="container bg-overlay-events"
+	div class="events-header container-fluid"
+		h1
+			strong Events
+
+div class="container"
+	div class="row"
+		div class="col-md-8 col-md-offset-2"
+			div class="codrops-header container-fluid"
+				h1 
+					strong= @event.title
+hr
+div class="container"
+	div class="row"
+		div class="col-md-7 col-md-offset-3"
+			h4
+				strong Event start at:&nbsp;
+				= @event.start.strftime('%H:%M, %b %d, %Y')
+				| &nbsp;&nbsp;
+				strong Event end at:&nbsp;
+				= @event.end.strftime('%H:%M, %b %d, %Y')
+		div class="row"
+				div class="col-md-12"
+					hr
+					p.lead = @event.description.gsub(/[\n\r]/, "<br />").html_safe
