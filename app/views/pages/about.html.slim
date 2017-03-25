@@ -10,33 +10,33 @@ div class="carousel fade-carousel slide" data-ride="carousel" data-interval="220
       div class="slide-1"
       div class="hero"
         hgroup
-            h1 We are creative       
-            h3 Get start  with us!
+            h1 = t 'about.show_page.slide_1'      
+            h3 = t 'about.show_page.slide_p' 
     div class="item slides"
       div class="slide-2"
       div class="hero"    
         hgroup
-            h1 We are smart  
-            h3 Get start with us!
+            h1 = t 'about.show_page.slide_2'   
+            h3 = t 'about.show_page.slide_p' 
     div class="item slides"
       div class="slide-3"
       div class="hero"
         hgroup
-            h1 We are amazing     
-            h3 Get start with us!
+            h1 = t 'about.show_page.slide_3'    
+            h3 = t 'about.show_page.slide_p'   
 
 div class="aboutus"
  div class="container"
-	h3 Our company information
+	h3 = t 'about.show_page.inf'
 	hr
 	div class="col-md-7 wow fadeInDown" data-wow-duration="1000ms" data-wow-delay="300ms"
 		= image_tag("7.jpg", class: "img-responsive")
-		h4 We Create, Design and Make it Real
-		p Nam tempor velit sed turpis imperdiet vestibulum. In mattis leo ut sapien euismod id feugiat mauris euismod. 
+		h4 = t 'about.show_page.slogan'
+		p = t 'about.show_page.slog_desc'
 	div class="col-md-5 wow fadeInDown" data-wow-duration="1000ms" data-wow-delay="600ms"
 		div class="skill"
-			h2 Our Skills
-			p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+			h2 = t 'about.show_page.skill'
+			p = t 'about.show_page.skill_inf'
 
 			div class="progress-wrap"
 				h3 .NET
@@ -68,9 +68,9 @@ section id="team"
     div class="container wow fadeInUp"
       div class="row"
         div class="col-md-12"
-          h3 class="section-title" Our Team
+          h3 class="section-title" = t 'about.show_page.team'
           .section-title-divider
-          p class="section-description" Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque
+          p class="section-description" = t 'about.show_page.team_inf'
       
       div class="row"
         div class="col-md-3"

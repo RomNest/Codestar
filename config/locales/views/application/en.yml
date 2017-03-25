@@ -1,0 +1,9 @@
+en:
+  application:
+    show_page:
+      about: About
+      portfolio: Portfolio
+      vacancy: Vacancy
+      events: Events
+      novelties: Novelties
+      contact: Contact

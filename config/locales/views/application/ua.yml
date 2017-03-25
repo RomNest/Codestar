@@ -1,0 +1,9 @@
+ua:
+  application:
+    show_page:
+      about: Про нас
+      portfolio: Проекти
+      vacancy: Вакансії
+      events: Події
+      novelties: Новини
+      contact: Контакти

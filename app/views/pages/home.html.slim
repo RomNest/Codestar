@@ -5,13 +5,13 @@ div class="animated_greeting"
 			h1 class="main-title" 
 				strong Code 
 				span class="thin" star
-				p We are a Global Company
+				p = t 'home.show_page.slogan'
 hr
 
 div class="codrops-header container-fluid"
 	h1 
-		strong Software Engineering
-		span We use the latest technologies to provide the best software engineering solutions that respond to the modern market needs.
+		strong = t 'home.show_page.way'
+		span = t 'home.show_page.way_desc'
 hr
 
 div class="container"
@@ -21,35 +21,35 @@ div class="container"
                 = image_tag("startup.jpg", class: "img-size")
                 div class="carousel-caption"
                     p class="text-size"
-                    	strong Codestar provides you with a great team of professional designers, programmers, managers and engineers who have helped dozens of startups projects to grown into a promising and successful business.
+                    	strong = t 'home.show_page.startup_desc'
             div class="item"
                 = image_tag("e-commerce.jpg", class: "img-size")
                 div class="carousel-caption"
                     p class="text-size"
-                    	strong Codestar can help you improve and increase your business profitability through the modern technologies, functionality, useful features and eye-catching E-Commerce website.
+                    	strong = t 'home.show_page.commerce_desc'
             div class="item"
                 = image_tag("healthcare.jpg", class: "img-size")
                 div class="carousel-caption"
                     p class="text-size"
-                    	strong Codestar team creates and implements innovative solutions in the healthcare industry. We develop secure cloud applications that are HIPAA compliant. Our programs meet all the requirements that are must-follow when it comes to protecting healthcare information.
+                    	strong = t 'home.show_page.health_desc'
             div class="item"
                 = image_tag("industry.jpg", class: "img-size")
                 div class="carousel-caption"
                     p class="text-size"
-                    	strong Our team delivers high-quality results that are based on your industry-specific expertise and successful methodologies that have already PROVEN to work for MANY projects worldwide.
+                    	strong = t 'home.show_page.heavy_desc'
         ul class="nav nav-pills nav-justified"
             li data-target="#myCarousel" data-slide-to="0" class="active" 
             	a href="#" class="fonts-size"
-            		strong Startup
+            		strong = t 'home.show_page.startup'
             li data-target="#myCarousel" data-slide-to="1"
             	a href="#" class="fonts-size"
-            		strong E-Commerce
+            		strong = t 'home.show_page.commerce'
             li data-target="#myCarousel" data-slide-to="2"
             	a href="#" class="fonts-size"
-            		strong Healthcare
+            		strong = t 'home.show_page.health'
             li data-target="#myCarousel" data-slide-to="3"
             	a href="#" class="fonts-size"
-            		strong Heavy industry
+            		strong = t 'home.show_page.heavy'
 
 hr
 
@@ -59,8 +59,8 @@ div id="about-bg"
 		div class="row"
 			div class="about-bg-heading"
 				h1 
-					strong sucessfull stats about us
-				p what we have achieved so far
+					strong = t 'home.show_page.successful'
+				p = t 'home.show_page.successful_p'
 
 			div class=" col-xs-12 col-md-3"
 				div class="about-bg-wrapper"
@@ -68,7 +68,7 @@ div id="about-bg"
 						h1
 							span class="border" 32
 							| 15
-					p happy client
+					p = t 'home.show_page.happy'
 
 			div class="col-xs-12 col-md-3"
 				div class="about-bg-wrapper"
@@ -76,7 +76,7 @@ div id="about-bg"
 						h1
 							span class="border" 32
 							| 15
-					p projects
+					p = t 'home.show_page.proj'
 
 			div class="col-xs-12 col-md-3"
 				div class="about-bg-wrapper"
@@ -84,7 +84,7 @@ div id="about-bg"
 						h1
 							span class="border" 32
 							| 15
-					p branches
+					p = t 'home.show_page.bra'
 
 			div class="col-xs-12 col-md-3"
 				div class="about-bg-wrapper"
@@ -92,7 +92,7 @@ div id="about-bg"
 						h1
 							span class="border" 32
 							| 15
-					p expert team
+					p = t 'home.show_page.team'
 
 	div class="cover"
 
@@ -101,10 +101,10 @@ section id="testimonials"
       div class="row"
         div class="col-md-12"
           h3 class="section-title" 
-          	strong Testimonials
+          	strong = t 'home.show_page.testimonial'
           hr
           p class="section-description" 
-          	span SEE WHAT CLIENTS ARE SAYING?
+          	span = t 'home.show_page.see_test'
       
       div class="row"
         div class="col-md-3"
@@ -115,14 +115,14 @@ section id="testimonials"
         div class="col-md-9"
           div class="quote"
             b=image_tag("quote_sign_left.png") 
-            | Remarkably professional and exceptionally dedicated to results
+            = t 'home.show_page.test_1'
             small =image_tag("quote_sign_right.png")
       
       div class="row"
         div class="col-md-9"
           div class="quote"
             b=image_tag("quote_sign_left.png") 
-            | High level of reliability and the quality of final products encourages to cooperate more
+            = t 'home.show_page.test_2'
             small =image_tag("quote_sign_right.png")
         div class="col-md-3"
           div class="profile"

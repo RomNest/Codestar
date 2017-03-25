@@ -17,17 +17,21 @@ html
 	            div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1"
 	                ul class="nav navbar-nav navbar-right"
 	                    li
-	                        a class="page-scroll" href="/about" About
+	                        a class="page-scroll" href="/about" = t 'application.show_page.about'
 	                    li
-	                        a class="page-scroll" href="/portfolio" Portfolio
+	                        a class="page-scroll" href="/portfolio" = t 'application.show_page.portfolio'
 	                    li
-	                        a class="page-scroll" href="/company/vacancies" Vacancy
+	                        a class="page-scroll" href="/company/vacancies" = t 'application.show_page.vacancy'
 	                    li
-	                        a class="page-scroll" href="/company/events" Events
+	                        a class="page-scroll" href="/company/events" = t 'application.show_page.events'
 	                    li
-	                        a class="page-scroll" href="/company/novelties" Novelties
+	                        a class="page-scroll" href="/company/novelties" = t 'application.show_page.novelties'
 	                    li
-	                        a class="page-scroll" href="/contact" Contact
+	                        a class="page-scroll" href="/contact" = t 'application.show_page.contact'
+	                    li
+	                    	= link_to_unless I18n.locale == :en, "en", set_language_english_path
+	                    li
+							= link_to_unless I18n.locale == :ua, "ua", set_language_ukraine_path
                   
 		= yield
 
