@@ -22,9 +22,16 @@ class VacanciesController < ApplicationController
 	end
 
 	def update
+		if @vacancy.update(vacancy_params)
+			redirect_to @vacancy
+		else
+			render 'edit'
+		end
 	end
 
 	def destroy
+		@vacancy.destroy
+		redirect_to root_path
 	end
 
 	private

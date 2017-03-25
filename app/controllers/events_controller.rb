@@ -30,7 +30,10 @@ class EventsController < ApplicationController
 		end
 	end
 
-	def destroy;end
+	def destroy
+		@event.destroy
+		redirect_to root_path
+	end
 
 	private 
 

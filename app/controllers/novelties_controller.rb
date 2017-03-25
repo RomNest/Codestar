@@ -24,9 +24,18 @@ class NoveltiesController < ApplicationController
 		end
 	end
 
-	def update;end
+	def update
+		if @novelty.update(novelties_params)
+			redirect_to @novelty
+		else
+			render 'edit'
+		end
+	end
 
-	def destroy;end
+	def destroy
+		@novelty.destroy
+		redirect_to root_path
+	end
 
 	private 
 
