@@ -43,23 +43,21 @@ section id="contact"
         
         div class="col-md-5 col-md-push-2"
           div class="form"
-            div id="sendmessage" Your message has been sent. Thank you!
-            div id="errormessage"
-            form action="" method="post" role="form" class="contactForm"
-                div class="form-group"
-                  input type="text" name="name" class="form-control" id="name" placeholder="#{t'contact.show_page.name'}" data-rule="minlen:4" data-msg="Please enter at least 4 chars"
-                  .validation
-                div class="form-group"
-                  input type="email" class="form-control" name="email" id="email" placeholder="#{t'contact.show_page.email'}" data-rule="email" data-msg="Please enter a valid email"
-                  .validation
-                div class="form-group"
-                  input type="text" class="form-control" name="subject" id="subject" placeholder="#{t'contact.show_page.subj'}" data-rule="minlen:4" data-msg="Please enter at least 8 chars of subject"
-                  .validation
-                div class="form-group"
-                  textarea class="form-control" name="message" rows="5" data-rule="required" data-msg="#{t'contact.show_page.desc'}" placeholder="#{t'contact.show_page.desc'}"
-                  .validation
-                div class="text-center"
-                  button type="submit" = t 'contact.show_page.send'
+            = form_for @contact do |f|
+              .form_in
+                = f.label "#{t'contact.show_page.name'}"
+                = f.text_field :name, :autofocus => true, class: "form-control", placeholder: "#{t'contact.show_page.name'}"
+              .form_in
+                = f.label "#{t'contact.show_page.email'}"
+                = f.text_field :email, class: "form-control", placeholder: "#{t'contact.show_page.email'}"
+              .form_in
+                = f.label "#{t'contact.show_page.subj'}"
+                = f.text_field :subject, class: "form-control", placeholder: "#{t'contact.show_page.subj'}" 
+              .form_in
+                = f.label "#{t'contact.show_page.desc'}"
+                = f.text_area :message, class: "form-control", placeholder: "#{t'contact.show_page.desc'}" 
+              .form_in
+                = f.submit "#{t'contact.show_page.send'}", remote: true, class:"btn button btn-block"
 
 #google-map
   <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3024.8844088212463!2d-73.98975255333487!3d40.698543335037364!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c25a35da2fd673%3A0x218ed6cc00224ef8!2zQWRhbXMgU3QsIEJyb29rbHluLCBOWSAwNzAzMCwg0KHQv9C-0LvRg9GH0LXQvdGWINCo0YLQsNGC0Lgg0JDQvNC10YDQuNC60Lg!5e0!3m2!1suk!2sua!4v1489841068240" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
