@@ -13,46 +13,38 @@ div class="codrops-header container-fluid"
 		strong = t 'home.show_page.way'
 		span = t 'home.show_page.way_desc'
 hr
-
+br
 div class="container"
-    div id="myCarousel" class="carousel slide carousel-padding" data-ride="carousel"
-        div class="carousel-inner"
-            div class="item active"
-                = image_tag("startup.jpg", class: "img-size")
-                div class="carousel-caption"
-                    p class="text-size"
-                    	strong = t 'home.show_page.startup_desc'
-            div class="item"
-                = image_tag("e-commerce.jpg", class: "img-size")
-                div class="carousel-caption"
-                    p class="text-size"
-                    	strong = t 'home.show_page.commerce_desc'
-            div class="item"
-                = image_tag("healthcare.jpg", class: "img-size")
-                div class="carousel-caption"
-                    p class="text-size"
-                    	strong = t 'home.show_page.health_desc'
-            div class="item"
-                = image_tag("industry.jpg", class: "img-size")
-                div class="carousel-caption"
-                    p class="text-size"
-                    	strong = t 'home.show_page.heavy_desc'
-        ul class="nav nav-pills nav-justified"
-            li data-target="#myCarousel" data-slide-to="0" class="active" 
-            	a href="#" class="fonts-size"
-            		strong = t 'home.show_page.startup'
-            li data-target="#myCarousel" data-slide-to="1"
-            	a href="#" class="fonts-size"
-            		strong = t 'home.show_page.commerce'
-            li data-target="#myCarousel" data-slide-to="2"
-            	a href="#" class="fonts-size"
-            		strong = t 'home.show_page.health'
-            li data-target="#myCarousel" data-slide-to="3"
-            	a href="#" class="fonts-size"
-            		strong = t 'home.show_page.heavy'
-
+	div class="row"
+		div class="col-sm-6 col-md-6"
+			div class="services-wrap"
+				div class="text-center"
+					.fa.fa-rocket#rocket
+				div class="services-body"
+					h2 = t 'home.show_page.startup'
+            		p = t 'home.show_page.startup_desc'
+		div class="col-sm-6 col-md-6"
+			div class="services-wrap"
+				div class="text-center"
+					.fa.fa-building-o#build
+				div class="services-body"
+					h2 = t 'home.show_page.commerce'
+            		p = t 'home.show_page.commerce_desc'
+		div class="col-sm-6 col-md-6"
+			div class="services-wrap"
+				div class="text-center"
+					.fa.fa-heartbeat#heart
+				div class="services-body"
+					h2 = t 'home.show_page.health'
+            		p = t 'home.show_page.health_desc'
+        div class="col-sm-6 col-md-6"
+			div class="services-wrap"
+				div class="text-center"
+					.fa.fa-globe#globe
+				div class="services-body"
+					h2 = t 'home.show_page.heavy'
+            		p = t 'home.show_page.heavy_desc'					
 hr
-
 div id="about-bg"
 
 	div class="container"

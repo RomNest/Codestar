@@ -1064,3 +1064,25 @@
   font-weight: 500;
   color: white;
 }
+
+.services-wrap {
+  padding: 40px 30px;
+  background: rgba(240, 94, 62, 0.8);
+  border-radius: 4px;
+  margin: 0 0 40px;
+  height: 35rem;
+}
+
+.services-body {
+  text-align: center;
+  color: white;
+  h2 {
+    font-weight: 700;
+  }
+}
+
+#rocket, #build, #heart, #globe {
+  color: white;
+  font-size: 10rem;
+  text-align: center;
+}
