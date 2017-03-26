@@ -2,7 +2,13 @@
 	.wrapper_skinny
 
 		= form_for @novelty do |f|
-
+			#errors_wrapper
+				- if @novelty.errors.any?
+					h2 
+						= pluralize(@novelty.errors.count, "error")
+					ul
+						- @novelty.errors.full_messages.each do |msg|
+							p = msg
 			.form_in
 				= f.label "Tile:"
 				= f.text_field :title, :autofocus => true, class: "form-control", placeholder: "Title."

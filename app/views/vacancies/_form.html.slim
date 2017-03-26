@@ -2,6 +2,13 @@
 	.wrapper_skinny
 
 		= form_for @vacancy do |f|
+			#errors_wrapper
+				- if @vacancy.errors.any?
+					h2 
+						= pluralize(@vacancy.errors.count, "error")
+					ul
+						- @vacancy.errors.full_messages.each do |msg|
+							p = msg
 			.form_in
 				= f.label "Name:"
 				= f.text_field :name, :autofocus => true, class: "form-control", placeholder: "Name for new vacancy."

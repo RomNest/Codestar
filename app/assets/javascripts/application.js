@@ -108,3 +108,10 @@ $(document).ready( function() {
         });     
     });
 
+$(document).ready(function(){
+    setTimeout(function(){
+    $('#errors_wrapper').fadeOut("slow", function(){
+      $this.remove();
+    });
+  }, 3500 );
+ });

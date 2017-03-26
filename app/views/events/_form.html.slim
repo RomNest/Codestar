@@ -2,6 +2,13 @@
 	.wrapper_skinny
 
 		= form_for @event do |f|
+			#errors_wrapper
+				- if @event.errors.any?
+					h2 
+						= pluralize(@event.errors.count, "error")
+					ul
+						- @event.errors.full_messages.each do |msg|
+							p = msg
 			.form_in
 				= f.label "Event name:"
 				= f.text_field :title, :autofocus => true, class: "form-control", placeholder: "Event name"
